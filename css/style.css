@@ -8,6 +8,12 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+.offset:before{
+    display: block;
+    content: "";
+    height: 6rem;
+}
+
 .navbar{
     text-transform: uppercase;
     font-size: 14px;
@@ -29,7 +35,7 @@ body{
 
 .heading-content{
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 100%;
     max-width: 100%;
 }
@@ -133,3 +139,63 @@ body{
     font-weight: 400;
 }
 /*----- Newsletter End -----*/
+
+/*----- Newsletter Start -----*/
+.socialNetworkIcons a{
+ text-decoration: none;
+}
+/*----- Newsletter Start -----*/
+
+/*----- Media Query Start -----*/
+@media screen and (max-width: 767px){
+    .navbar{
+        letter-spacing: 0.1rem;
+        padding: 10px 0;
+    }
+
+    .heading-content{
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .heading-content h5{
+        font-size: 3rem;
+    }
+    
+    .heading-content h1{
+        font-size: 3rem;
+    }
+    
+    .heading-content p{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 479px){
+    .navbar{
+        letter-spacing: 0.1rem;
+        padding: 7px 0;
+    }
+
+    .heading-content{
+        position: absolute;
+        top: 12%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .heading-content h5{
+        font-size: 2rem;
+    }
+    
+    .heading-content h1{
+        font-size: 2rem;
+    }
+    
+    .heading-content p{
+        font-size: 0.7rem;
+    }
+}
+/*----- Media Query End -----*/
