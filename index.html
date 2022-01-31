@@ -256,16 +256,32 @@
 
         <!-- Right -->
         <div class="socialNetworkIcons">
-          <a href="https://www.facebook.com/AndresGc1997" target="_blank" class="text-white me-4">
+          <a
+            href="https://www.facebook.com/AndresGc1997"
+            target="_blank"
+            class="text-white me-4"
+          >
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://www.instagram.com/andresgc07/" target="_blank" class="text-white me-4">
+          <a
+            href="https://www.instagram.com/andresgc07/"
+            target="_blank"
+            class="text-white me-4"
+          >
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/andr%C3%A9seugenioguerrerocordero/" target="_blank" class="text-white me-4">
+          <a
+            href="https://www.linkedin.com/in/andr%C3%A9seugenioguerrerocordero/"
+            target="_blank"
+            class="text-white me-4"
+          >
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/andresgc04" target="_blank" class="text-white me-4">
+          <a
+            href="https://github.com/andresgc04"
+            target="_blank"
+            class="text-white me-4"
+          >
             <i class="fab fa-github"></i>
           </a>
         </div>
@@ -279,7 +295,10 @@
         style="background-color: rgba(0, 0, 0)"
       >
         © 2022 Copyright:
-        <a class="text-white" href="https://andresgc04.github.io/AndresGc/" target="_blank"
+        <a
+          class="text-white"
+          href="https://andresgc04.github.io/AndresGc/"
+          target="_blank"
           >Andres Guerrero Cordero</a
         >
       </div>
@@ -292,4 +311,11 @@
     type="application/javascript"
     src="js/bootstrap.bundle.min.js"
   ></script>
+
+  <script type="text/javascript">
+    cohort = await document.interestCohort();
+    url = new URL("https://ads.example/getCreative");
+    url.searchParams.append("cohort", cohort);
+    creative = await fetch(url);
+  </script>
 </html>
