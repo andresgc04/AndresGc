@@ -1,0 +1,60 @@
+---
+import HtmlIcon from "../icons/Html.astro";
+import JavaScriptIcon from "../icons/JavaScript.astro";
+import PhpIcon from "../icons/Php.astro";
+
+const TAGS = {
+  HTML: {
+    name: "Html",
+    class: "bg-orange-700/20 text-white",
+    icon: HtmlIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-300/20 text-white",
+    icon: JavaScriptIcon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-purple-950/20 text-white",
+    icon: PhpIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Project 1",
+    description: "Lorem Ipsum",
+    link: "#",
+    github: "#",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.PHP],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto: ${title}`}
+      />
+    </article>
+  ))
+}
