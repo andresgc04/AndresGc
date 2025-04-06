@@ -98,16 +98,24 @@ const navItems = [
     dark: bg-gray-800/90 bg-white/50;
   }
 
-  @keyframes nav-shadow {
-    0% {
-      background-color: rgba(255, 255, 255, 0); /* blanco con opacidad 0 */
-      box-shadow: none;
-      backdrop-filter: blur(0px);
+  @layer utilities {
+    @keyframes nav-shadown {
+      0% {
+        background-color: rgba(255, 255, 255, 0);
+      }
+      to {
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.1),
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
     }
-    100% {
-      background-color: rgba(255, 255, 255, 0.1); /* blanco con opacidad 10% */
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
+
+    .animate-nav-shadown {
+      animation: nav-shadown 0.5s ease forwards;
     }
   }
 </style>

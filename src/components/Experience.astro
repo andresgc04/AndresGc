@@ -4,31 +4,34 @@ import ExperienceItem from "./ExperienceItem.astro";
 const EXPERIENCE = [
   {
     date: "Actualmente...",
-    title: "Junior Programmer - Imperial Tobacco La Romana",
+    title: "Junior Programmer",
+    company: "Imperial Tobacco La Romana",
     description:
       "Responsable de desarrollar, actualizar, mantener y mejorar las aplicaciones informáticas internas de la empresa.",
     link: "https://www.linkedin.com/company/imperial-tobacco-la-romana/",
   },
   {
     date: "17/04/2021 - 18/02/2022",
-    title: "Analista Programador - Asociación Romana De Ahorros y Préstamos",
+    title: "Analista Programador",
+    company: "Asociación Romana De Ahorros y Préstamos",
     description:
       "Programar y desarrollar aplicaciones o módulos en los sistemas informáticos de la empresa para maximizar la eficiencia de los mismos, como soporte operacional. ",
     link: "https://www.linkedin.com/company/asociacionromana/",
   },
   {
     date: "07/07/2019 - 15/10/2020",
-    title: "FullStack Developer - Instituto Compucentro Plaza",
+    title: "FullStack Developer",
+    company: "Instituto Compucentro Plaza",
     description:
       "Encargado del desarrollo de los nuevos sistemas del Instituto y a la vez realizar soporte y mantenimiento a cada uno de los sistemas, equipos y servidores locales.",
   },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+<ol class="relative mt-16">
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
+      <li class="ms-4">
         <ExperienceItem {...experience} />
       </li>
     ))
